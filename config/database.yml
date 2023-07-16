@@ -5,6 +5,7 @@ default: &default
   username: monchifc
   password: <%= ENV['MONCHIFC_DATABASE_PASSWORD'] %>
   timeout: 5000
+  
 
 development:
   <<: *default
