@@ -31,6 +31,7 @@ gem "tailwindcss-rails"
 gem "jbuilder"
 
 gem "devise"
+gem "sassc-rails"
 
 
 
