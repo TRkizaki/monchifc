@@ -39,7 +39,7 @@
           To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       -->
       <div id="modal-panel" 
-           class="hidden relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
+           class="relative bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-xl sm:w-full sm:p-6"
            data-transition-enter="ease-out duration-300"
            data-transition-enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
            data-transition-enter-end="opacity-100 translate-y-0 sm:scale-100"
@@ -47,24 +47,55 @@
            data-transition-leave-start="opacity-100 translate-y-0 sm:scale-100"
            data-transition-leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
            >
-        <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-          <div class="sm:flex sm:items-start">
-            <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-              <svg class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-              </svg>
-            </div>
-            <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-              <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Deactivate account</h3>
-              <div class="mt-2">
-                <p class="text-sm text-gray-500">Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.</p>
+            
+            <div>
+             <div class="flex">
+              <div class="flex-none cursor-pointer" data-modal-target="closeButton">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+               </svg>
+              </div>
+              <div class="grow">
+                <h3 class="pr-7 text-md font-medium leading-6 text-gray-900 text-center mb-4 pr-8" id="modal-title">Log In or Sign Up</h3>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-          <button type="button" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Deactivate</button>
-          <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancel</button>
+
+            <div class="relative">
+                <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                 <div class="w-full border-t border-gray-300"></div>
+              </div>
+            </div>
+             
+             <div class="clear"></div>
+
+              <div class="pt-4">
+                <h4 class="text-2xl leading-6 text-gray-900 mt-2 font-medium">Welcome to Monchifc</h4>
+                <p class="text-sm text-gray-500">Monchifc coming soon...</p>
+
+                <div class="mt-6 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-black focus-within:border-black">
+                <label for="name" class="block text-xs font-medium text-gray-900">Email</label>
+                <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="Monchi">
+               </div>
+              </div>
+            </div>
+            <div class="my-5 sm:my-6">
+             <button type="button" class="w-full inline-flex justify-center item-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 airbnb-pink-gradient">Continue</button>
+           </div>
+
+           <div class="relative">
+                <div class="absolute inset-0 flex items-center" aria-hidden="true">
+             <div class="w-full border-t border-gray-300"></div>
+             </div> 
+             <div class="relative flex justify-center">
+             <span class="px-2 bg-white text-sm text-gray-500">or</span>
+             </div>
+           </div>
+
+           <div class="my-5 sm:my-6">
+             <button type="button" class="w-full inline-flex justify-center item-center px-6 py-3 border border-black shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+               <svg class="-ml-1 mr-3 h-5 w-5 left" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" aria-hidden="true" focusable="false" style="height: 20px; width: 20px; display: block; fill: currentcolor;"><defs><path d="M22 0H2C.9 0 0 .9 0 2v20c0 1.1.9 2 2 2h11v-9H9V9h4V7c0-3.3 2.7-6 6-6h2v3h-2c-1.1 0-2 .9-2 2v2h4l-1 3h-3v9h5c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"></path></defs><g fill="none" fill-rule="evenodd"><mask id></mask><path d></path><path d></path></g></svg>
+               Continue with Facebook
+            </button>
         </div>
       </div>
     </div>
