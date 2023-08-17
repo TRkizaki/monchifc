@@ -57,7 +57,8 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
-
+  
+  # This is to prevent error caused by the sassc-rails
   # Got some error in Rails on sprockets precompilation step after tailwind build file generated
   config.assets.css_compressor = nil 
 end
